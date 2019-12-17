@@ -1,6 +1,7 @@
 'use strict';
 
 const defaultOptions = {
+  "depth":         0,
   "shallow":       false,
   "react":         false,
   "es6": {
@@ -13,6 +14,33 @@ const defaultOptions = {
 const getOptions = (userOptions) => {
   if (!userOptions || !(userOptions instanceof Object)) return defaultOptions
 
+  if (typeof userOptions.depth === 'number') {
+    if ((userOptions.depth > 0) && (userOptions.depth < Infinity)) {
+      userOptions.shallow = true
+    }
+    else {
+      delete userOptions.depth
+      delete userOptions.shallow
+    }
+  }
+  if ((typeof userOptions.depth !== 'number') && (userOptions.depth !== undefined)) {
+    delete userOptions.depth
+  }
+
+  if (typeof userOptions.shallow === 'boolean') {
+    if (!userOptions.depth) {
+      let val = userOptions.shallow
+      userOptions.depth = (val) ? 1 : 0
+    }
+  }
+  if ((typeof userOptions.shallow !== 'boolean') && (userOptions.shallow !== undefined)) {
+    delete userOptions.shallow
+  }
+
+  if ((typeof userOptions.react !== 'boolean') && (userOptions.react !== undefined)) {
+    delete userOptions.react
+  }
+
   if (typeof userOptions.es6 === 'boolean') {
     let val = userOptions.es6
     userOptions.es6 = {
@@ -21,14 +49,21 @@ const getOptions = (userOptions) => {
       "ArrayBuffer": val
     }
   }
+  if ((typeof userOptions.es6 !== 'object') && (userOptions.es6 !== undefined)) {
+    delete userOptions.es6
+  }
 
   return {...defaultOptions, ...userOptions}
 }
 
 const isBranchEqual = (a, b, options) => {
-  return (options.shallow)
-    ? (a === b)
-    : isRootEqual(a, b, options)
+  if (!options.shallow || (options.depth > 0)) {
+    if (options.depth > 0) options.depth--
+    return isRootEqual(a, b, options)
+  }
+  else { // if (options.shallow && (options.depth <= 0))
+    return (a === b)
+  }
 }
 
 const isRootEqual = (a, b, options) => {
