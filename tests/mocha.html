@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mocha Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mocha@6/mocha.css" />
+    <style>
+      #mocha-report li > h2 {font-size: 20px}
+    </style>
+
+    <script>
+      window.require = (module) => {
+        switch (module) {
+          case 'assert':
+            return window.chai.assert
+          case '../..':
+            return window.equal
+          case './tests':
+            return window.tests
+          case './es6tests':
+            return window.es6tests
+          case './depth_tests':
+            return window.depth_tests
+          default:
+            return null
+        }
+      }
+
+      // 'mocha' exports by: window[name]=value
+      // 'chai' exports by: module.exports=chai
+      // '@warren-bank/fast-equal' exports by: module.exports=equal
+
+      window.exports = {}
+
+      window.module  = {
+        set exports(value) {
+          if ((typeof value === 'function') && value.name) {
+            window[value.name] = value
+          }
+          if (typeof value === 'object') {
+            if (value.expect)
+              window.chai = value
+            else if (value.deep && value.reference)
+              window.depth_tests = value
+            else if (Array.isArray(value) && value.length && (typeof value[0] === 'object')) {
+              let val = value[0]
+              if (val.description === 'scalars')
+                window.tests = value
+              else if (val.description === 'bigint')
+                window.es6tests = value
+            }
+            else
+              alert(JSON.stringify(value))
+          }
+        }
+      }
+    </script>
+    <script src="../index.js"></script>
+    <script src="spec/tests.js"></script>
+    <script src="spec/es6tests.js"></script>
+    <script src="spec/depth_tests.js"></script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <script src="https://unpkg.com/chai@4/chai.js"></script>
+    <script src="https://unpkg.com/mocha@6/mocha.js"></script>
+
+    <script class="mocha-init">
+      mocha.setup('bdd')
+      mocha.checkLeaks()
+    </script>
+    <script src="spec/index.spec.js"></script>
+    <script src="spec/depth.spec.js"></script>
+    <script class="mocha-exec">
+      mocha.run();
+    </script>
+  </body>
+</html>
+
+<!--
+References:
+  https://mochajs.org/#running-mocha-in-the-browser
+
+Dependencies:
+  https://unpkg.com/browse/mocha@6.2.2/
+  https://unpkg.com/browse/chai@4.2.0/
+-->

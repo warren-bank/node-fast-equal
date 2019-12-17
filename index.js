@@ -15,7 +15,7 @@ const getOptions = (userOptions) => {
   if (!userOptions || !(userOptions instanceof Object)) return defaultOptions
 
   if (typeof userOptions.depth === 'number') {
-    if ((userOptions.depth > 0) && (userOptions.depth < Infinity)) {
+    if ((userOptions.depth >= 0) && (userOptions.depth < Infinity)) {
       userOptions.shallow = true
     }
     else {
@@ -28,7 +28,7 @@ const getOptions = (userOptions) => {
   }
 
   if (typeof userOptions.shallow === 'boolean') {
-    if (!userOptions.depth) {
+    if (userOptions.depth == undefined) {
       let val = userOptions.shallow
       userOptions.depth = (val) ? 1 : 0
     }
@@ -56,18 +56,15 @@ const getOptions = (userOptions) => {
   return {...defaultOptions, ...userOptions}
 }
 
-const isBranchEqual = (a, b, options) => {
-  if (!options.shallow || (options.depth > 0)) {
-    if (options.depth > 0) options.depth--
-    return isRootEqual(a, b, options)
-  }
-  else { // if (options.shallow && (options.depth <= 0))
-    return (a === b)
-  }
-}
+const isEqual = (a, b, options) => {
+  if (a === b) return true
 
-const isRootEqual = (a, b, options) => {
-  if (a === b) return true;
+  if (options.shallow) {
+    if (options.depth <= 0)
+      return false
+    else
+      options = {...options, depth: (options.depth - 1)}
+  }
 
   if (a && b && typeof a == 'object' && typeof b == 'object') {
     if (a.constructor !== b.constructor) return false;
@@ -77,7 +74,7 @@ const isRootEqual = (a, b, options) => {
       length = a.length;
       if (length != b.length) return false;
       for (i = length; i-- !== 0;)
-        if (!isBranchEqual(a[i], b[i], options)) return false;
+        if (!isEqual(a[i], b[i], options)) return false;
       return true;
     }
 
@@ -87,7 +84,7 @@ const isRootEqual = (a, b, options) => {
         for (i of a.entries())
           if (!b.has(i[0])) return false;
         for (i of a.entries())
-          if (!isBranchEqual(i[1], b.get(i[0]), options)) return false;
+          if (!isEqual(i[1], b.get(i[0]), options)) return false;
         return true;
       }
     }
@@ -132,7 +129,7 @@ const isRootEqual = (a, b, options) => {
         continue;
       }
 
-      if (!isBranchEqual(a[key], b[key], options)) return false;
+      if (!isEqual(a[key], b[key], options)) return false;
     }
 
     return true;
@@ -147,5 +144,5 @@ module.exports = function equal(a, b, userOptions) {
 
   const options = getOptions(userOptions)
 
-  return isRootEqual(a, b, options)
+  return isEqual(a, b, options)
 };

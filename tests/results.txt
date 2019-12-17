@@ -1,5 +1,117 @@
 > mocha spec/*.spec.js -R spec
 
+  equal - deep equality
+    objects
+      √ 1 level deep
+      √ 1 level deep (reverse arguments)
+      √ 2 levels deep
+      √ 2 levels deep (reverse arguments)
+      √ 3 levels deep
+      √ 3 levels deep (reverse arguments)
+      √ 4 levels deep
+      √ 4 levels deep (reverse arguments)
+    arrays
+      √ 1 level deep
+      √ 1 level deep (reverse arguments)
+      √ 2 levels deep
+      √ 2 levels deep (reverse arguments)
+      √ 3 levels deep
+      √ 3 levels deep (reverse arguments)
+      √ 4 levels deep
+      √ 4 levels deep (reverse arguments)
+
+  equal - strict reference equality
+    objects
+      √ same instance
+      √ same instance (reverse arguments)
+      √ different instances
+      √ different instances (reverse arguments)
+    arrays
+      √ same instance
+      √ same instance (reverse arguments)
+      √ different instances
+      √ different instances (reverse arguments)
+
+  equal - shallow equality - depth=1
+    objects
+      √ 1 level deep
+      √ 1 level deep (reverse arguments)
+      √ 2 levels deep
+      √ 2 levels deep (reverse arguments)
+      √ 3 levels deep
+      √ 3 levels deep (reverse arguments)
+      √ 4 levels deep
+      √ 4 levels deep (reverse arguments)
+    arrays
+      √ 1 level deep
+      √ 1 level deep (reverse arguments)
+      √ 2 levels deep
+      √ 2 levels deep (reverse arguments)
+      √ 3 levels deep
+      √ 3 levels deep (reverse arguments)
+      √ 4 levels deep
+      √ 4 levels deep (reverse arguments)
+
+  equal - shallow equality - depth=2
+    objects
+      √ 1 level deep
+      √ 1 level deep (reverse arguments)
+      √ 2 levels deep
+      √ 2 levels deep (reverse arguments)
+      √ 3 levels deep
+      √ 3 levels deep (reverse arguments)
+      √ 4 levels deep
+      √ 4 levels deep (reverse arguments)
+    arrays
+      √ 1 level deep
+      √ 1 level deep (reverse arguments)
+      √ 2 levels deep
+      √ 2 levels deep (reverse arguments)
+      √ 3 levels deep
+      √ 3 levels deep (reverse arguments)
+      √ 4 levels deep
+      √ 4 levels deep (reverse arguments)
+
+  equal - shallow equality - depth=3
+    objects
+      √ 1 level deep
+      √ 1 level deep (reverse arguments)
+      √ 2 levels deep
+      √ 2 levels deep (reverse arguments)
+      √ 3 levels deep
+      √ 3 levels deep (reverse arguments)
+      √ 4 levels deep
+      √ 4 levels deep (reverse arguments)
+    arrays
+      √ 1 level deep
+      √ 1 level deep (reverse arguments)
+      √ 2 levels deep
+      √ 2 levels deep (reverse arguments)
+      √ 3 levels deep
+      √ 3 levels deep (reverse arguments)
+      √ 4 levels deep
+      √ 4 levels deep (reverse arguments)
+
+  equal - shallow equality - depth=4
+    objects
+      √ 1 level deep
+      √ 1 level deep (reverse arguments)
+      √ 2 levels deep
+      √ 2 levels deep (reverse arguments)
+      √ 3 levels deep
+      √ 3 levels deep (reverse arguments)
+      √ 4 levels deep
+      √ 4 levels deep (reverse arguments)
+    arrays
+      √ 1 level deep
+      √ 1 level deep (reverse arguments)
+      √ 2 levels deep
+      √ 2 levels deep (reverse arguments)
+      √ 3 levels deep
+      √ 3 levels deep (reverse arguments)
+      √ 4 levels deep
+      √ 4 levels deep (reverse arguments)
+
   equal - standard tests
     scalars
       √ equal numbers
@@ -683,4 +795,4 @@
         √ elements of same type with different props are not equal
 
 
-  626 passing (112ms)
+  714 passing (139ms)
