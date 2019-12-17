@@ -1,0 +1,16 @@
+{
+  "name": "@warren-bank/fast-equal",
+  "version": "3.1.1",
+  "main": "index.js",
+  "description": "Fast equal",
+  "author": "Evgeny Poberezkin",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warren-bank/node-fast-equal"
+  }
+}

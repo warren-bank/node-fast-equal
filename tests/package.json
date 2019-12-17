@@ -1,0 +1,22 @@
+{
+  "name": "@warren-bank/do-not-publish",
+  "private": true,
+  "version": "1.0.0",
+  "main": "",
+  "description": "Fast equal",
+  "author": "Evgeny Poberezkin",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha spec/*.spec.js -R spec"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "react": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
+    "sinon": "^7.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warren-bank/node-fast-equal"
+  }
+}

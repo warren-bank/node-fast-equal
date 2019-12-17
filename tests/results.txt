@@ -1,0 +1,686 @@
+> mocha spec/*.spec.js -R spec
+
+  equal - standard tests
+    scalars
+      √ equal numbers
+      √ equal numbers (reverse arguments)
+      √ not equal numbers
+      √ not equal numbers (reverse arguments)
+      √ number and array are not equal
+      √ number and array are not equal (reverse arguments)
+      √ 0 and null are not equal
+      √ 0 and null are not equal (reverse arguments)
+      √ equal strings
+      √ equal strings (reverse arguments)
+      √ not equal strings
+      √ not equal strings (reverse arguments)
+      √ empty string and null are not equal
+      √ empty string and null are not equal (reverse arguments)
+      √ null is equal to null
+      √ null is equal to null (reverse arguments)
+      √ equal booleans (true)
+      √ equal booleans (true) (reverse arguments)
+      √ equal booleans (false)
+      √ equal booleans (false) (reverse arguments)
+      √ not equal booleans
+      √ not equal booleans (reverse arguments)
+      √ 1 and true are not equal
+      √ 1 and true are not equal (reverse arguments)
+      √ 0 and false are not equal
+      √ 0 and false are not equal (reverse arguments)
+      √ NaN and NaN are equal
+      √ NaN and NaN are equal (reverse arguments)
+      √ 0 and -0 are equal
+      √ 0 and -0 are equal (reverse arguments)
+      √ Infinity and Infinity are equal
+      √ Infinity and Infinity are equal (reverse arguments)
+      √ Infinity and -Infinity are not equal
+      √ Infinity and -Infinity are not equal (reverse arguments)
+    objects
+      √ empty objects are equal
+      √ empty objects are equal (reverse arguments)
+      √ equal objects (same properties "order")
+      √ equal objects (same properties "order") (reverse arguments)
+      √ equal objects (different properties "order")
+      √ equal objects (different properties "order") (reverse arguments)
+      √ not equal objects (extra property)
+      √ not equal objects (extra property) (reverse arguments)
+      √ not equal objects (different property values)
+      √ not equal objects (different property values) (reverse arguments)
+      √ not equal objects (different properties)
+      √ not equal objects (different properties) (reverse arguments)
+      √ equal objects (same sub-properties)
+      √ equal objects (same sub-properties) (reverse arguments)
+      √ not equal objects (different sub-property value)
+      √ not equal objects (different sub-property value) (reverse arguments)
+      √ not equal objects (different sub-property)
+      √ not equal objects (different sub-property) (reverse arguments)
+      √ empty array and empty object are not equal
+      √ empty array and empty object are not equal (reverse arguments)
+      √ object with extra undefined properties are not equal #1
+      √ object with extra undefined properties are not equal #1 (reverse arguments)
+      √ object with extra undefined properties are not equal #2
+      √ object with extra undefined properties are not equal #2 (reverse arguments)
+      √ object with extra undefined properties are not equal #3
+      √ object with extra undefined properties are not equal #3 (reverse arguments)
+      √ nulls are equal
+      √ nulls are equal (reverse arguments)
+      √ null and undefined are not equal
+      √ null and undefined are not equal (reverse arguments)
+      √ null and empty object are not equal
+      √ null and empty object are not equal (reverse arguments)
+      √ undefined and empty object are not equal
+      √ undefined and empty object are not equal (reverse arguments)
+      √ objects with different `toString` functions returning same values are equal
+      √ objects with different `toString` functions returning same values are equal (reverse arguments)
+      √ objects with `toString` functions returning different values are not equal
+      √ objects with `toString` functions returning different values are not equal (reverse arguments)
+    arrays
+      √ two empty arrays are equal
+      √ two empty arrays are equal (reverse arguments)
+      √ equal arrays
+      √ equal arrays (reverse arguments)
+      √ not equal arrays (different item)
+      √ not equal arrays (different item) (reverse arguments)
+      √ not equal arrays (different length)
+      √ not equal arrays (different length) (reverse arguments)
+      √ equal arrays of objects
+      √ equal arrays of objects (reverse arguments)
+      √ not equal arrays of objects
+      √ not equal arrays of objects (reverse arguments)
+      √ pseudo array and equivalent array are not equal
+      √ pseudo array and equivalent array are not equal (reverse arguments)
+    Date objects
+      √ equal date objects
+      √ equal date objects (reverse arguments)
+      √ not equal date objects
+      √ not equal date objects (reverse arguments)
+      √ date and string are not equal
+      √ date and string are not equal (reverse arguments)
+      √ date and object are not equal
+      √ date and object are not equal (reverse arguments)
+    RegExp objects
+      √ equal RegExp objects
+      √ equal RegExp objects (reverse arguments)
+      √ not equal RegExp objects (different pattern)
+      √ not equal RegExp objects (different pattern) (reverse arguments)
+      √ not equal RegExp objects (different flags)
+      √ not equal RegExp objects (different flags) (reverse arguments)
+      √ RegExp and string are not equal
+      √ RegExp and string are not equal (reverse arguments)
+      √ RegExp and object are not equal
+      √ RegExp and object are not equal (reverse arguments)
+    functions
+      √ same function is equal
+      √ same function is equal (reverse arguments)
+      √ different functions are not equal
+      √ different functions are not equal (reverse arguments)
+    sample objects
+      √ big object
+      √ big object (reverse arguments)
+
+  es6 equal - standard tests
+    scalars
+      √ equal numbers
+      √ equal numbers (reverse arguments)
+      √ not equal numbers
+      √ not equal numbers (reverse arguments)
+      √ number and array are not equal
+      √ number and array are not equal (reverse arguments)
+      √ 0 and null are not equal
+      √ 0 and null are not equal (reverse arguments)
+      √ equal strings
+      √ equal strings (reverse arguments)
+      √ not equal strings
+      √ not equal strings (reverse arguments)
+      √ empty string and null are not equal
+      √ empty string and null are not equal (reverse arguments)
+      √ null is equal to null
+      √ null is equal to null (reverse arguments)
+      √ equal booleans (true)
+      √ equal booleans (true) (reverse arguments)
+      √ equal booleans (false)
+      √ equal booleans (false) (reverse arguments)
+      √ not equal booleans
+      √ not equal booleans (reverse arguments)
+      √ 1 and true are not equal
+      √ 1 and true are not equal (reverse arguments)
+      √ 0 and false are not equal
+      √ 0 and false are not equal (reverse arguments)
+      √ NaN and NaN are equal
+      √ NaN and NaN are equal (reverse arguments)
+      √ 0 and -0 are equal
+      √ 0 and -0 are equal (reverse arguments)
+      √ Infinity and Infinity are equal
+      √ Infinity and Infinity are equal (reverse arguments)
+      √ Infinity and -Infinity are not equal
+      √ Infinity and -Infinity are not equal (reverse arguments)
+    objects
+      √ empty objects are equal
+      √ empty objects are equal (reverse arguments)
+      √ equal objects (same properties "order")
+      √ equal objects (same properties "order") (reverse arguments)
+      √ equal objects (different properties "order")
+      √ equal objects (different properties "order") (reverse arguments)
+      √ not equal objects (extra property)
+      √ not equal objects (extra property) (reverse arguments)
+      √ not equal objects (different property values)
+      √ not equal objects (different property values) (reverse arguments)
+      √ not equal objects (different properties)
+      √ not equal objects (different properties) (reverse arguments)
+      √ equal objects (same sub-properties)
+      √ equal objects (same sub-properties) (reverse arguments)
+      √ not equal objects (different sub-property value)
+      √ not equal objects (different sub-property value) (reverse arguments)
+      √ not equal objects (different sub-property)
+      √ not equal objects (different sub-property) (reverse arguments)
+      √ empty array and empty object are not equal
+      √ empty array and empty object are not equal (reverse arguments)
+      √ object with extra undefined properties are not equal #1
+      √ object with extra undefined properties are not equal #1 (reverse arguments)
+      √ object with extra undefined properties are not equal #2
+      √ object with extra undefined properties are not equal #2 (reverse arguments)
+      √ object with extra undefined properties are not equal #3
+      √ object with extra undefined properties are not equal #3 (reverse arguments)
+      √ nulls are equal
+      √ nulls are equal (reverse arguments)
+      √ null and undefined are not equal
+      √ null and undefined are not equal (reverse arguments)
+      √ null and empty object are not equal
+      √ null and empty object are not equal (reverse arguments)
+      √ undefined and empty object are not equal
+      √ undefined and empty object are not equal (reverse arguments)
+      √ objects with different `toString` functions returning same values are equal
+      √ objects with different `toString` functions returning same values are equal (reverse arguments)
+      √ objects with `toString` functions returning different values are not equal
+      √ objects with `toString` functions returning different values are not equal (reverse arguments)
+    arrays
+      √ two empty arrays are equal
+      √ two empty arrays are equal (reverse arguments)
+      √ equal arrays
+      √ equal arrays (reverse arguments)
+      √ not equal arrays (different item)
+      √ not equal arrays (different item) (reverse arguments)
+      √ not equal arrays (different length)
+      √ not equal arrays (different length) (reverse arguments)
+      √ equal arrays of objects
+      √ equal arrays of objects (reverse arguments)
+      √ not equal arrays of objects
+      √ not equal arrays of objects (reverse arguments)
+      √ pseudo array and equivalent array are not equal
+      √ pseudo array and equivalent array are not equal (reverse arguments)
+    Date objects
+      √ equal date objects
+      √ equal date objects (reverse arguments)
+      √ not equal date objects
+      √ not equal date objects (reverse arguments)
+      √ date and string are not equal
+      √ date and string are not equal (reverse arguments)
+      √ date and object are not equal
+      √ date and object are not equal (reverse arguments)
+    RegExp objects
+      √ equal RegExp objects
+      √ equal RegExp objects (reverse arguments)
+      √ not equal RegExp objects (different pattern)
+      √ not equal RegExp objects (different pattern) (reverse arguments)
+      √ not equal RegExp objects (different flags)
+      √ not equal RegExp objects (different flags) (reverse arguments)
+      √ RegExp and string are not equal
+      √ RegExp and string are not equal (reverse arguments)
+      √ RegExp and object are not equal
+      √ RegExp and object are not equal (reverse arguments)
+    functions
+      √ same function is equal
+      √ same function is equal (reverse arguments)
+      √ different functions are not equal
+      √ different functions are not equal (reverse arguments)
+    sample objects
+      √ big object
+      √ big object (reverse arguments)
+
+  es6 equal - es6 tests
+    bigint
+      √ equal bigints
+      √ equal bigints (reverse arguments)
+      √ not equal bigints
+      √ not equal bigints (reverse arguments)
+    Maps
+      √ empty maps are equal
+      √ empty maps are equal (reverse arguments)
+      √ empty maps of different class are not equal
+      √ empty maps of different class are not equal (reverse arguments)
+      √ equal maps (same key "order")
+      √ equal maps (same key "order") (reverse arguments)
+      √ not equal maps (same key "order" - instances of different classes)
+      √ not equal maps (same key "order" - instances of different classes) (reverse arguments)
+      √ equal maps (different key "order")
+      √ equal maps (different key "order") (reverse arguments)
+      √ equal maps (different key "order" - instances of the same subclass)
+      √ equal maps (different key "order" - instances of the same subclass) (reverse arguments)
+      √ not equal maps (extra key)
+      √ not equal maps (extra key) (reverse arguments)
+      √ not equal maps (different key value)
+      √ not equal maps (different key value) (reverse arguments)
+      √ not equal maps (different keys)
+      √ not equal maps (different keys) (reverse arguments)
+      √ equal maps (same sub-keys)
+      √ equal maps (same sub-keys) (reverse arguments)
+      √ not equal maps (different sub-key value)
+      √ not equal maps (different sub-key value) (reverse arguments)
+      √ not equal maps (different sub-key)
+      √ not equal maps (different sub-key) (reverse arguments)
+      √ empty map and empty object are not equal
+      √ empty map and empty object are not equal (reverse arguments)
+      √ map with extra undefined key is not equal #1
+      √ map with extra undefined key is not equal #1 (reverse arguments)
+      √ map with extra undefined key is not equal #2
+      √ map with extra undefined key is not equal #2 (reverse arguments)
+      √ maps with extra undefined keys are not equal #3
+      √ maps with extra undefined keys are not equal #3 (reverse arguments)
+      √ null and empty map are not equal
+      √ null and empty map are not equal (reverse arguments)
+      √ undefined and empty map are not equal
+      √ undefined and empty map are not equal (reverse arguments)
+      √ map and a pseudo map are not equal
+      √ map and a pseudo map are not equal (reverse arguments)
+    Sets
+      √ empty sets are equal
+      √ empty sets are equal (reverse arguments)
+      √ empty sets of different class are not equal
+      √ empty sets of different class are not equal (reverse arguments)
+      √ equal sets (same value "order")
+      √ equal sets (same value "order") (reverse arguments)
+      √ not equal sets (same value "order" - instances of different classes)
+      √ not equal sets (same value "order" - instances of different classes) (reverse arguments)
+      √ equal sets (different value "order")
+      √ equal sets (different value "order") (reverse arguments)
+      √ equal sets (different value "order" - instances of the same subclass)
+      √ equal sets (different value "order" - instances of the same subclass) (reverse arguments)
+      √ not equal sets (extra value)
+      √ not equal sets (extra value) (reverse arguments)
+      √ not equal sets (different values)
+      √ not equal sets (different values) (reverse arguments)
+      √ not equal sets (different instances of objects)
+      √ not equal sets (different instances of objects) (reverse arguments)
+      √ equal sets (same instances of objects)
+      √ equal sets (same instances of objects) (reverse arguments)
+      √ empty set and empty object are not equal
+      √ empty set and empty object are not equal (reverse arguments)
+      √ empty set and empty array are not equal
+      √ empty set and empty array are not equal (reverse arguments)
+      √ set with extra undefined value is not equal #1
+      √ set with extra undefined value is not equal #1 (reverse arguments)
+      √ set with extra undefined value is not equal #2
+      √ set with extra undefined value is not equal #2 (reverse arguments)
+      √ set and pseudo set are not equal
+      √ set and pseudo set are not equal (reverse arguments)
+    Typed arrays
+      √ two empty arrays of the same class are equal
+      √ two empty arrays of the same class are equal (reverse arguments)
+      √ two empty arrays of the different class are not equal
+      √ two empty arrays of the different class are not equal (reverse arguments)
+      √ equal arrays
+      √ equal arrays (reverse arguments)
+      √ equal BigUint64Array arrays
+      √ equal BigUint64Array arrays (reverse arguments)
+      √ not equal BigUint64Array arrays
+      √ not equal BigUint64Array arrays (reverse arguments)
+      √ not equal arrays (same items, different class)
+      √ not equal arrays (same items, different class) (reverse arguments)
+      √ not equal arrays (different item)
+      √ not equal arrays (different item) (reverse arguments)
+      √ not equal arrays (different length)
+      √ not equal arrays (different length) (reverse arguments)
+      √ pseudo array and equivalent typed array are not equal
+      √ pseudo array and equivalent typed array are not equal (reverse arguments)
+
+  equal react - standard tests
+    scalars
+      √ equal numbers
+      √ equal numbers (reverse arguments)
+      √ not equal numbers
+      √ not equal numbers (reverse arguments)
+      √ number and array are not equal
+      √ number and array are not equal (reverse arguments)
+      √ 0 and null are not equal
+      √ 0 and null are not equal (reverse arguments)
+      √ equal strings
+      √ equal strings (reverse arguments)
+      √ not equal strings
+      √ not equal strings (reverse arguments)
+      √ empty string and null are not equal
+      √ empty string and null are not equal (reverse arguments)
+      √ null is equal to null
+      √ null is equal to null (reverse arguments)
+      √ equal booleans (true)
+      √ equal booleans (true) (reverse arguments)
+      √ equal booleans (false)
+      √ equal booleans (false) (reverse arguments)
+      √ not equal booleans
+      √ not equal booleans (reverse arguments)
+      √ 1 and true are not equal
+      √ 1 and true are not equal (reverse arguments)
+      √ 0 and false are not equal
+      √ 0 and false are not equal (reverse arguments)
+      √ NaN and NaN are equal
+      √ NaN and NaN are equal (reverse arguments)
+      √ 0 and -0 are equal
+      √ 0 and -0 are equal (reverse arguments)
+      √ Infinity and Infinity are equal
+      √ Infinity and Infinity are equal (reverse arguments)
+      √ Infinity and -Infinity are not equal
+      √ Infinity and -Infinity are not equal (reverse arguments)
+    objects
+      √ empty objects are equal
+      √ empty objects are equal (reverse arguments)
+      √ equal objects (same properties "order")
+      √ equal objects (same properties "order") (reverse arguments)
+      √ equal objects (different properties "order")
+      √ equal objects (different properties "order") (reverse arguments)
+      √ not equal objects (extra property)
+      √ not equal objects (extra property) (reverse arguments)
+      √ not equal objects (different property values)
+      √ not equal objects (different property values) (reverse arguments)
+      √ not equal objects (different properties)
+      √ not equal objects (different properties) (reverse arguments)
+      √ equal objects (same sub-properties)
+      √ equal objects (same sub-properties) (reverse arguments)
+      √ not equal objects (different sub-property value)
+      √ not equal objects (different sub-property value) (reverse arguments)
+      √ not equal objects (different sub-property)
+      √ not equal objects (different sub-property) (reverse arguments)
+      √ empty array and empty object are not equal
+      √ empty array and empty object are not equal (reverse arguments)
+      √ object with extra undefined properties are not equal #1
+      √ object with extra undefined properties are not equal #1 (reverse arguments)
+      √ object with extra undefined properties are not equal #2
+      √ object with extra undefined properties are not equal #2 (reverse arguments)
+      √ object with extra undefined properties are not equal #3
+      √ object with extra undefined properties are not equal #3 (reverse arguments)
+      √ nulls are equal
+      √ nulls are equal (reverse arguments)
+      √ null and undefined are not equal
+      √ null and undefined are not equal (reverse arguments)
+      √ null and empty object are not equal
+      √ null and empty object are not equal (reverse arguments)
+      √ undefined and empty object are not equal
+      √ undefined and empty object are not equal (reverse arguments)
+      √ objects with different `toString` functions returning same values are equal
+      √ objects with different `toString` functions returning same values are equal (reverse arguments)
+      √ objects with `toString` functions returning different values are not equal
+      √ objects with `toString` functions returning different values are not equal (reverse arguments)
+    arrays
+      √ two empty arrays are equal
+      √ two empty arrays are equal (reverse arguments)
+      √ equal arrays
+      √ equal arrays (reverse arguments)
+      √ not equal arrays (different item)
+      √ not equal arrays (different item) (reverse arguments)
+      √ not equal arrays (different length)
+      √ not equal arrays (different length) (reverse arguments)
+      √ equal arrays of objects
+      √ equal arrays of objects (reverse arguments)
+      √ not equal arrays of objects
+      √ not equal arrays of objects (reverse arguments)
+      √ pseudo array and equivalent array are not equal
+      √ pseudo array and equivalent array are not equal (reverse arguments)
+    Date objects
+      √ equal date objects
+      √ equal date objects (reverse arguments)
+      √ not equal date objects
+      √ not equal date objects (reverse arguments)
+      √ date and string are not equal
+      √ date and string are not equal (reverse arguments)
+      √ date and object are not equal
+      √ date and object are not equal (reverse arguments)
+    RegExp objects
+      √ equal RegExp objects
+      √ equal RegExp objects (reverse arguments)
+      √ not equal RegExp objects (different pattern)
+      √ not equal RegExp objects (different pattern) (reverse arguments)
+      √ not equal RegExp objects (different flags)
+      √ not equal RegExp objects (different flags) (reverse arguments)
+      √ RegExp and string are not equal
+      √ RegExp and string are not equal (reverse arguments)
+      √ RegExp and object are not equal
+      √ RegExp and object are not equal (reverse arguments)
+    functions
+      √ same function is equal
+      √ same function is equal (reverse arguments)
+      √ different functions are not equal
+      √ different functions are not equal (reverse arguments)
+    sample objects
+      √ big object
+      √ big object (reverse arguments)
+
+  es6 equal react - standard tests
+    scalars
+      √ equal numbers
+      √ equal numbers (reverse arguments)
+      √ not equal numbers
+      √ not equal numbers (reverse arguments)
+      √ number and array are not equal
+      √ number and array are not equal (reverse arguments)
+      √ 0 and null are not equal
+      √ 0 and null are not equal (reverse arguments)
+      √ equal strings
+      √ equal strings (reverse arguments)
+      √ not equal strings
+      √ not equal strings (reverse arguments)
+      √ empty string and null are not equal
+      √ empty string and null are not equal (reverse arguments)
+      √ null is equal to null
+      √ null is equal to null (reverse arguments)
+      √ equal booleans (true)
+      √ equal booleans (true) (reverse arguments)
+      √ equal booleans (false)
+      √ equal booleans (false) (reverse arguments)
+      √ not equal booleans
+      √ not equal booleans (reverse arguments)
+      √ 1 and true are not equal
+      √ 1 and true are not equal (reverse arguments)
+      √ 0 and false are not equal
+      √ 0 and false are not equal (reverse arguments)
+      √ NaN and NaN are equal
+      √ NaN and NaN are equal (reverse arguments)
+      √ 0 and -0 are equal
+      √ 0 and -0 are equal (reverse arguments)
+      √ Infinity and Infinity are equal
+      √ Infinity and Infinity are equal (reverse arguments)
+      √ Infinity and -Infinity are not equal
+      √ Infinity and -Infinity are not equal (reverse arguments)
+    objects
+      √ empty objects are equal
+      √ empty objects are equal (reverse arguments)
+      √ equal objects (same properties "order")
+      √ equal objects (same properties "order") (reverse arguments)
+      √ equal objects (different properties "order")
+      √ equal objects (different properties "order") (reverse arguments)
+      √ not equal objects (extra property)
+      √ not equal objects (extra property) (reverse arguments)
+      √ not equal objects (different property values)
+      √ not equal objects (different property values) (reverse arguments)
+      √ not equal objects (different properties)
+      √ not equal objects (different properties) (reverse arguments)
+      √ equal objects (same sub-properties)
+      √ equal objects (same sub-properties) (reverse arguments)
+      √ not equal objects (different sub-property value)
+      √ not equal objects (different sub-property value) (reverse arguments)
+      √ not equal objects (different sub-property)
+      √ not equal objects (different sub-property) (reverse arguments)
+      √ empty array and empty object are not equal
+      √ empty array and empty object are not equal (reverse arguments)
+      √ object with extra undefined properties are not equal #1
+      √ object with extra undefined properties are not equal #1 (reverse arguments)
+      √ object with extra undefined properties are not equal #2
+      √ object with extra undefined properties are not equal #2 (reverse arguments)
+      √ object with extra undefined properties are not equal #3
+      √ object with extra undefined properties are not equal #3 (reverse arguments)
+      √ nulls are equal
+      √ nulls are equal (reverse arguments)
+      √ null and undefined are not equal
+      √ null and undefined are not equal (reverse arguments)
+      √ null and empty object are not equal
+      √ null and empty object are not equal (reverse arguments)
+      √ undefined and empty object are not equal
+      √ undefined and empty object are not equal (reverse arguments)
+      √ objects with different `toString` functions returning same values are equal
+      √ objects with different `toString` functions returning same values are equal (reverse arguments)
+      √ objects with `toString` functions returning different values are not equal
+      √ objects with `toString` functions returning different values are not equal (reverse arguments)
+    arrays
+      √ two empty arrays are equal
+      √ two empty arrays are equal (reverse arguments)
+      √ equal arrays
+      √ equal arrays (reverse arguments)
+      √ not equal arrays (different item)
+      √ not equal arrays (different item) (reverse arguments)
+      √ not equal arrays (different length)
+      √ not equal arrays (different length) (reverse arguments)
+      √ equal arrays of objects
+      √ equal arrays of objects (reverse arguments)
+      √ not equal arrays of objects
+      √ not equal arrays of objects (reverse arguments)
+      √ pseudo array and equivalent array are not equal
+      √ pseudo array and equivalent array are not equal (reverse arguments)
+    Date objects
+      √ equal date objects
+      √ equal date objects (reverse arguments)
+      √ not equal date objects
+      √ not equal date objects (reverse arguments)
+      √ date and string are not equal
+      √ date and string are not equal (reverse arguments)
+      √ date and object are not equal
+      √ date and object are not equal (reverse arguments)
+    RegExp objects
+      √ equal RegExp objects
+      √ equal RegExp objects (reverse arguments)
+      √ not equal RegExp objects (different pattern)
+      √ not equal RegExp objects (different pattern) (reverse arguments)
+      √ not equal RegExp objects (different flags)
+      √ not equal RegExp objects (different flags) (reverse arguments)
+      √ RegExp and string are not equal
+      √ RegExp and string are not equal (reverse arguments)
+      √ RegExp and object are not equal
+      √ RegExp and object are not equal (reverse arguments)
+    functions
+      √ same function is equal
+      √ same function is equal (reverse arguments)
+      √ different functions are not equal
+      √ different functions are not equal (reverse arguments)
+    sample objects
+      √ big object
+      √ big object (reverse arguments)
+
+  es6 equal react - es6 tests
+    bigint
+      √ equal bigints
+      √ equal bigints (reverse arguments)
+      √ not equal bigints
+      √ not equal bigints (reverse arguments)
+    Maps
+      √ empty maps are equal
+      √ empty maps are equal (reverse arguments)
+      √ empty maps of different class are not equal
+      √ empty maps of different class are not equal (reverse arguments)
+      √ equal maps (same key "order")
+      √ equal maps (same key "order") (reverse arguments)
+      √ not equal maps (same key "order" - instances of different classes)
+      √ not equal maps (same key "order" - instances of different classes) (reverse arguments)
+      √ equal maps (different key "order")
+      √ equal maps (different key "order") (reverse arguments)
+      √ equal maps (different key "order" - instances of the same subclass)
+      √ equal maps (different key "order" - instances of the same subclass) (reverse arguments)
+      √ not equal maps (extra key)
+      √ not equal maps (extra key) (reverse arguments)
+      √ not equal maps (different key value)
+      √ not equal maps (different key value) (reverse arguments)
+      √ not equal maps (different keys)
+      √ not equal maps (different keys) (reverse arguments)
+      √ equal maps (same sub-keys)
+      √ equal maps (same sub-keys) (reverse arguments)
+      √ not equal maps (different sub-key value)
+      √ not equal maps (different sub-key value) (reverse arguments)
+      √ not equal maps (different sub-key)
+      √ not equal maps (different sub-key) (reverse arguments)
+      √ empty map and empty object are not equal
+      √ empty map and empty object are not equal (reverse arguments)
+      √ map with extra undefined key is not equal #1
+      √ map with extra undefined key is not equal #1 (reverse arguments)
+      √ map with extra undefined key is not equal #2
+      √ map with extra undefined key is not equal #2 (reverse arguments)
+      √ maps with extra undefined keys are not equal #3
+      √ maps with extra undefined keys are not equal #3 (reverse arguments)
+      √ null and empty map are not equal
+      √ null and empty map are not equal (reverse arguments)
+      √ undefined and empty map are not equal
+      √ undefined and empty map are not equal (reverse arguments)
+      √ map and a pseudo map are not equal
+      √ map and a pseudo map are not equal (reverse arguments)
+    Sets
+      √ empty sets are equal
+      √ empty sets are equal (reverse arguments)
+      √ empty sets of different class are not equal
+      √ empty sets of different class are not equal (reverse arguments)
+      √ equal sets (same value "order")
+      √ equal sets (same value "order") (reverse arguments)
+      √ not equal sets (same value "order" - instances of different classes)
+      √ not equal sets (same value "order" - instances of different classes) (reverse arguments)
+      √ equal sets (different value "order")
+      √ equal sets (different value "order") (reverse arguments)
+      √ equal sets (different value "order" - instances of the same subclass)
+      √ equal sets (different value "order" - instances of the same subclass) (reverse arguments)
+      √ not equal sets (extra value)
+      √ not equal sets (extra value) (reverse arguments)
+      √ not equal sets (different values)
+      √ not equal sets (different values) (reverse arguments)
+      √ not equal sets (different instances of objects)
+      √ not equal sets (different instances of objects) (reverse arguments)
+      √ equal sets (same instances of objects)
+      √ equal sets (same instances of objects) (reverse arguments)
+      √ empty set and empty object are not equal
+      √ empty set and empty object are not equal (reverse arguments)
+      √ empty set and empty array are not equal
+      √ empty set and empty array are not equal (reverse arguments)
+      √ set with extra undefined value is not equal #1
+      √ set with extra undefined value is not equal #1 (reverse arguments)
+      √ set with extra undefined value is not equal #2
+      √ set with extra undefined value is not equal #2 (reverse arguments)
+      √ set and pseudo set are not equal
+      √ set and pseudo set are not equal (reverse arguments)
+    Typed arrays
+      √ two empty arrays of the same class are equal
+      √ two empty arrays of the same class are equal (reverse arguments)
+      √ two empty arrays of the different class are not equal
+      √ two empty arrays of the different class are not equal (reverse arguments)
+      √ equal arrays
+      √ equal arrays (reverse arguments)
+      √ equal BigUint64Array arrays
+      √ equal BigUint64Array arrays (reverse arguments)
+      √ not equal BigUint64Array arrays
+      √ not equal BigUint64Array arrays (reverse arguments)
+      √ not equal arrays (same items, different class)
+      √ not equal arrays (same items, different class) (reverse arguments)
+      √ not equal arrays (different item)
+      √ not equal arrays (different item) (reverse arguments)
+      √ not equal arrays (different length)
+      √ not equal arrays (different length) (reverse arguments)
+      √ pseudo array and equivalent typed array are not equal
+      √ pseudo array and equivalent typed array are not equal (reverse arguments)
+
+  advanced
+    React
+      element (with circular references)
+        √ compares without warning or errors
+        √ elements of same type and props are equal
+        √ elements of same type with different props are not equal
+
+  advanced
+    React
+      element (with circular references)
+        √ compares without warning or errors
+        √ elements of same type and props are equal
+        √ elements of same type with different props are not equal
+
+
+  626 passing (112ms)
