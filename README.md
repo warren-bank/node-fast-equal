@@ -10,8 +10,8 @@ Fork of [fast-deep-equal](https://github.com/epoberezkin/fast-deep-equal)
 
 * `equal(a, b, options)`
   - options:
-    * shallow
-      - boolean
+    * key: `shallow`
+      - type: boolean
         * default value = `false`
         * summary:
           - `true`
@@ -26,15 +26,15 @@ Fork of [fast-deep-equal](https://github.com/epoberezkin/fast-deep-equal)
               - for all children where: `a[i] !== b[i]`
                 * `a[i]` and `b[i]` are both: Arrays, Objects, ES6 Maps
                 * same length
-                * all children: `a[i][j] === b[i][j]`
-    * react
-      - boolean
+                * all children: `a[i][j]` and `b[i][j]` exhibit _deep equality_
+    * key: `react`
+      - type: boolean
         * default value = `false`
         * summary:
           - avoid traversing React elements' `_owner`
           - `_owner` contains circular references and is not needed when comparing the actual elements
-    * es6
-      - Object || boolean
+    * key: `es6`
+      - type: Object || boolean
         * Object
           - keys can include: `['Map', 'Set', 'ArrayBuffer']`
           - values are boolean
